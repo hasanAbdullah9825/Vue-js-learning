@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+
+<div id="app">
+
+
+<p>{{title}}</p>
+<br>
+<p v-once>{{title}}</p>
+{{update()}}
+
+<br>
+{{greeting()}}
+<br>
+<img v-bind:src="src" v-bind:alt="alt">
+<br>
+<a v-bind:href="link">Click Me</a>
+
+<br>
+<p v-text="MyText"></p>
+<p v-html="MyHtml"></p>
+<p v-if="age===23"> you are adult</p>
+<p v-else>underage</p>
+<p v-show="age===23">hello jonogon</p>
+
+
+
+<p v-for="todo in todos">
+    {{todo.text}}
+</p>
+
+<button v-on:click="clickme" >Click me</button>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
