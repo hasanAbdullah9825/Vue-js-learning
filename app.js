@@ -14,7 +14,11 @@ new Vue({
             {text:"learn javascript"},
             {text:"learn vue js"},
             {text:"make something awesome"}
-        ]
+        ],
+        form:{
+            firstName:'',
+            lastName:''
+        }
         
         
     },
@@ -28,5 +32,10 @@ new Vue({
         clickme(){
             return this.title="changed after click event";
         }
+        ,
+        onSubmit(){
+            console.log(this.form.firstName,this.form.lastName);
+        }
+
     }
 });
