@@ -3,7 +3,8 @@ const app=Vue.createApp({
    return {
        myName:"Hasan",
        myAge:24,
-       myAgeAfterFiveYears:''
+       myAgeAfterFiveYears:'',
+       link:"dummy.png"
    };
     },
     methods:
