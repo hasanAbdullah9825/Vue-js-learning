@@ -24,10 +24,12 @@ new Vue({
     },
     methods:{
         greeting(){
-            return this.name;
+            // return this.name;
+            console.log("hello");
         },
         update(){
             setTimeout(()=>{return this.title="Imran vaiiiiiiiii"},2000);
+            console.log("yooooo");
         },
         clickme(){
             return this.title="changed after click event";

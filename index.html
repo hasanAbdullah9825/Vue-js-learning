@@ -11,8 +11,11 @@
 
 
 <div id="app">
-     
-
+     {{title}}
+   
+    <h1> {{form.firstName}}
+    </h1>
+   
     <form action=""v-on:submit.prevent="onSubmit">
 
         <label for="">First Name</label>
@@ -21,7 +24,6 @@
         <input type="text" name="lastName" v-model="form.lastName">
         <button type="submit" >submit</button>
     </form>
-
 
 
 
