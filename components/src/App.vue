@@ -1,7 +1,17 @@
 <template>
   <h2>My friends</h2>
-  <friend-contact></friend-contact>
-  <friend-contact></friend-contact>
+  <friend-contact name="Hasan"
+     phone-number="01789254656"
+     email-address="hasan@hotmail.com"
+     is-favorite="1"
+   ></friend-contact>
+  <friend-contact 
+  name="Rfsan"
+     phone-number="0189992556"
+     email-address="rfsan@hotmail.com"
+     is-favorite="0"
+  
+   ></friend-contact>
 </template>
 
 <script>
@@ -10,10 +20,7 @@ import FriendContact from './components/FriendContact.vue'
 
 export default {
   components: { FriendContact },
-  // name: 'App',
-  // components: {
-  //   HelloWorld
-  // }
+ 
   data(){
     return{
        detailsAreVisible: false,

@@ -1,16 +1,16 @@
 <template>
     <ul>
         <li>
-        <h2>{{friend.name}}</h2>
+        <h2>{{name}}</h2>
         <button @click="toggleDetails" >ShowDetails</button>
         <ul v-if ="detailsAreVisible">
             <li>
                 <strong>phone</strong>
-                {{friend.phone}}
+                {{phoneNumber}}
             </li>
             <li>
                 <strong>Email</strong>
-                {{friend.email}}
+                {{emailAddress}}
 
             </li>
             
@@ -20,6 +20,7 @@
 </template>
 <script>
 export default {
+    props:["name","emailAddress","phoneNumber"],
     data(){
  return{
      detailsAreVisible: false,
