@@ -24,9 +24,7 @@ export default {
 name:{
   type:String,
   required:true,
-
 },
-
 emailAddress:{
   type:String,
   required:true
@@ -61,7 +59,6 @@ return value==='0'|| value==='1';
       this.detailsAreVisible = !this.detailsAreVisible;
     },
     toggleFavorite() {
-
         if(this.friendIsFavorite==='1'){
             this.friendIsFavorite="0";
         }
@@ -72,5 +69,3 @@ return value==='0'|| value==='1';
   },
 };
 </script>
-<style >
-</style>
