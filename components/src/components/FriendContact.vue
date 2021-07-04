@@ -69,3 +69,5 @@ return value==='0'|| value==='1';
   },
 };
 </script>
+<style >
+</style>
