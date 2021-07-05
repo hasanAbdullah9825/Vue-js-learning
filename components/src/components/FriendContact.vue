@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li>
-      <h2>{{ name }} {{ friendIsFavorite === "1" ? "(favorite)" : "" }}</h2>
+      <h2>{{ name }} {{ friendIsFavorite ? "(favorite)" : "" }}</h2>
       <button @click="toggleDetails">ShowDetails</button>
       <button @click="toggleFavorite">toggleFavorite</button>
       <ul v-if="detailsAreVisible">
@@ -14,7 +14,7 @@
           {{ emailAddress }}
         </li>
       </ul>
-    </li>
+    </li> 
   </ul>
 </template>
 <script>
@@ -45,12 +45,7 @@ return value==='0'|| value==='1';
   data() {
     return {
       detailsAreVisible: false,
-      friend: {
-        id: "manuel",
-        name: "Manuel Lorenz",
-        phone: "0123 45678 90",
-        email: "manuel@localhost.com",
-      },
+      
       friendIsFavorite:this.isFavorite
     };
   },
@@ -59,12 +54,7 @@ return value==='0'|| value==='1';
       this.detailsAreVisible = !this.detailsAreVisible;
     },
     toggleFavorite() {
-        if(this.friendIsFavorite==='1'){
-            this.friendIsFavorite="0";
-        }
-        else{
-            this.friendIsFavorite="1";
-        }
+        this.friendIsFavorite=!this.friendIsFavorite;
     },
   },
 };
