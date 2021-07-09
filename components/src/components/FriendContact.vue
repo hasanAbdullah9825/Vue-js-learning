@@ -37,7 +37,7 @@ export default {
       required: true,
     },
     isFavorite: {
-      type: String,
+      type: Boolean,
       required: false,
     },
   },
