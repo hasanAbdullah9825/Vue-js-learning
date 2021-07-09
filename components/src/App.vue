@@ -14,13 +14,12 @@
     :email-address="friend.email"
     :is-favorite="friend.isFavorite"
     @toggle-favorite="toggleFavoriteStatus"
+    @delete-friend="deleteFriend"
   ></friend-contact>
 </template>
 
 <script>
-import NewFriend from "./components/NewFriend.vue";
 export default {
-  components: { NewFriend },
   data() {
     return {
       detailsAreVisible: false,
@@ -57,9 +56,12 @@ export default {
         name: name,
         phone: phone,
         email: email,
-        isFavorite:false
+        isFavorite: false,
       };
       this.friends.push(newfriend);
+    },
+    deleteFriend(friendId) {
+      this.friends = this.friends.filter((friend) => friend.id !== friendId);
     },
   },
 };

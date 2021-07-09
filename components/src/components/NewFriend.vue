@@ -29,6 +29,7 @@ export default {
       this.$emit("add-friend", this.name, this.phone, this.email);
     },
   },
+  emits:['add-friend']
 };
 </script>
 <style >
