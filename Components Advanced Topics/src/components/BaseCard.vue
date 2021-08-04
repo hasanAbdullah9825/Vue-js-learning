@@ -1,7 +1,7 @@
 <template>
   <div>
 
-      <header>
+      <header v-if="$slots.header"  >
         <slot name="header"></slot>
       </header>
       <slot></slot>
@@ -23,3 +23,9 @@
     align-items: center;
   }
 </style>
+
+<script>
+export default {
+  
+}
+</script>
