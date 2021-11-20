@@ -1,5 +1,6 @@
 <template>
   <the-navigation @set-page="setActivePage"></the-navigation>
+  <button @click="confirm">Confirm </button>
   <main>
     <!-- <component :is="activePage"></component> -->
     <router-view></router-view>
@@ -44,6 +45,9 @@ export default {
     setActivePage(page) {
       this.activePage = page;
     },
+    confirm(){
+      this.$router.push('/teams');
+    }
   },
 };
 </script>
