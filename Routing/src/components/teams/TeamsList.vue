@@ -16,7 +16,8 @@ export default {
   components: {
     TeamsItem,
   },
-  inject: ['teams'],
+  
+  inject: ['teams','users'],
 };
 </script>
 
