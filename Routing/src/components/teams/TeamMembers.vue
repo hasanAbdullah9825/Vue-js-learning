@@ -28,22 +28,19 @@ export default {
   },
   created() {
     const teamId = this.$route.params.teamId;
-     const selectedTeam = this.teams.find((team) => team.id === teamId);
-    
+    const selectedTeam = this.teams.find((team) => team.id === teamId);
+
     const members = selectedTeam.members;
 
     const selectedMember = [];
 
-
     for (const member of members) {
       const selectedUser = this.users.find((user) => user.id === member);
       selectedMember.push(selectedUser);
-      
     }
 
-    this.teamName=selectedTeam.name;
-    this.members=selectedMember;
-    
+    this.teamName = selectedTeam.name;
+    this.members = selectedMember;
   },
 };
 </script>
