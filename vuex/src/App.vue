@@ -3,6 +3,7 @@
     <TheCounter></TheCounter>
     <button @click="addOne">Add 1</button>
     <ChangeCounter></ChangeCounter>
+    <FavoriteCounter></FavoriteCounter>
   </base-container>
 </template>
 
@@ -10,12 +11,14 @@
 import BaseContainer from './components/BaseContainer.vue';
 import TheCounter from './components/TheCounter.vue';
 import ChangeCounter from './components/ChangeCounter.vue';
+import FavoriteCounter from './components/FavoriteValue.vue';
 
 export default {
   components: {
     BaseContainer,
     ChangeCounter,
     TheCounter,
+    FavoriteCounter,
   },
   computed: {
     counter() {

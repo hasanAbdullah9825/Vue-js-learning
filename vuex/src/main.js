@@ -12,6 +12,15 @@ const store = createStore({
     increment(state) {
       state.counter = state.counter + 1;
     },
+    increase(state, payload) {
+      state.counter = state.counter + payload.value;
+    },
+  },
+
+  getters: {
+    finalCounter(state) {
+      return state.counter * 6;
+    },
   },
 });
 const app = createApp(App);
